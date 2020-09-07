@@ -41,7 +41,8 @@ public class GradientDrawer : PropertyDrawer
                 if (textureRect.Contains(guiEvent.mousePosition))
                 {
                     // If window is already opened GetWindow will refocus window
-                    EditorWindow.GetWindow<GradientEditor>();
+                    GradientEditor gradientEditor = EditorWindow.GetWindow<GradientEditor>();
+                    gradientEditor.SetGradient(gradient);
                 }
             }
         }
